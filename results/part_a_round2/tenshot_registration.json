@@ -1,0 +1,17 @@
+{
+  "registered_utc": "2026-11-16T14:34:48.127596+00:00",
+  "files": {
+    "scripts/run_round2_tenshot.py": "cf4f38e77459c755199f8ae868a26c8ae2a83e517477d9c435c942468682856c",
+    "reports/part_a_round2/tenshot_protocol.md": "d1aa72488c1be18ac104462f865cb3ce92ef8c98178ef50308354eaf21fb400a",
+    "results/part_a_round2/selection.json": "997a4c0fa03e0cd15cb7898d229141ba81a75bc2f5eef2040fb5780906dfbaef",
+    "results/part_a_round2/propagation/selection.json": "99bb685467701955fd3a6c641c7a480636c1082732d4d67fdb83b4968fdfca17"
+  },
+  "seeds": [
+    0,
+    1,
+    42,
+    1993
+  ],
+  "shot": 10,
+  "no_retuning": true
+}

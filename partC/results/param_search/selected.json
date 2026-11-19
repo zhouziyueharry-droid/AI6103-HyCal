@@ -1,0 +1,38 @@
+{
+ "Official (n_min_p=20)": {
+  "fusion": "sum",
+  "lambda_reg": 0.0001,
+  "shrink_alpha": 0.0,
+  "metric": "weighted",
+  "n_min_p": 20,
+  "scale": 5.0,
+  "val_mean": 50.777227998385456
+ },
+ "Baseline (n_min_p=5)": {
+  "fusion": "sum",
+  "lambda_reg": 0.0001,
+  "shrink_alpha": 0.0,
+  "metric": "weighted",
+  "n_min_p": 5,
+  "scale": 5.0,
+  "val_mean": 52.5287891862801
+ },
+ "Tier 1: best official parameters": {
+  "fusion": "sum",
+  "lambda_reg": 0.001,
+  "shrink_alpha": 0.0,
+  "metric": "weighted",
+  "n_min_p": 2,
+  "scale": 1.0,
+  "val_mean": 53.06957956954826
+ },
+ "Tier 2: + pooled shrinkage": {
+  "fusion": "sum",
+  "lambda_reg": 0.0001,
+  "shrink_alpha": 0.75,
+  "metric": "weighted",
+  "n_min_p": 2,
+  "scale": 1.0,
+  "val_mean": 54.62630195647231
+ }
+}

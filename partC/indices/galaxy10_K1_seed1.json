@@ -1,0 +1,55 @@
+{
+ "dataset": "galaxy10",
+ "split": "train",
+ "split_file": "galaxy10_split.csv",
+ "shots_per_class": 1,
+ "seed": 1,
+ "train_indices": [
+  137,
+  2030,
+  2605,
+  4985,
+  6145,
+  7366,
+  8906,
+  11383,
+  12328,
+  13119
+ ],
+ "paths": [
+  "00165.jpg",
+  "02543.jpg",
+  "03241.jpg",
+  "06246.jpg",
+  "07685.jpg",
+  "09212.jpg",
+  "11148.jpg",
+  "14229.jpg",
+  "15407.jpg",
+  "16405.jpg"
+ ],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "class_ids": [
+  "galaxy10:0",
+  "galaxy10:1",
+  "galaxy10:2",
+  "galaxy10:3",
+  "galaxy10:4",
+  "galaxy10:5",
+  "galaxy10:6",
+  "galaxy10:7",
+  "galaxy10:8",
+  "galaxy10:9"
+ ]
+}

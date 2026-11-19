@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-16T14:33:51.685875+00:00",
+  "files": {
+    "scripts/diagnose_round2.py": "2bc8c9dc57da0c799ede6340f7ea25809ac4ac3ec8bf25868f3df3adfc22147a",
+    "reports/part_a_round2/joint_protocol.md": "e7cede43f354d8e5988d071fbe9c9f32686b28a5049f3d5d07a32e28c67c2c78",
+    "results/part_a_round2/final_execution_lock.json": "fc9cd2067f679439ba17abb973b8b8614246166822701e99f112e64d7afa57be"
+  },
+  "scope": "Analysis-only diagnostic script bound during confirmation, before any round2 test endpoint; no model changes."
+}

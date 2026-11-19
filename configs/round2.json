@@ -1,0 +1,842 @@
+{
+  "created_utc": "2026-11-16T14:12:37.975327+00:00",
+  "shot": 5,
+  "selection_seeds": [
+    0,
+    1,
+    42,
+    1993
+  ],
+  "final_seeds": [
+    0,
+    1,
+    42,
+    1993,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "candidates": [
+    {
+      "family": "H0"
+    },
+    {
+      "family": "H2"
+    },
+    {
+      "family": "MD"
+    },
+    {
+      "family": "CLIP"
+    },
+    {
+      "family": "VisualPrototype"
+    },
+    {
+      "family": "H2_weight",
+      "weight": 0.5
+    },
+    {
+      "family": "H2_weight",
+      "weight": 1.0
+    },
+    {
+      "family": "GDA",
+      "alpha": 0.0001
+    },
+    {
+      "family": "GDA",
+      "alpha": 0.001
+    },
+    {
+      "family": "GDA",
+      "alpha": 0.01
+    },
+    {
+      "family": "GDA",
+      "alpha": 0.1
+    },
+    {
+      "family": "GDA",
+      "alpha": 1.0
+    },
+    {
+      "family": "GDA",
+      "alpha": 10.0
+    },
+    {
+      "family": "GDA",
+      "alpha": 100.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 0.1,
+      "beta": 1.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 0.1,
+      "beta": 5.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 0.1,
+      "beta": 10.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 0.1,
+      "beta": 20.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 1.0,
+      "beta": 1.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 1.0,
+      "beta": 5.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 1.0,
+      "beta": 10.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 1.0,
+      "beta": 20.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 10.0,
+      "beta": 1.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 10.0,
+      "beta": 5.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 10.0,
+      "beta": 10.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 10.0,
+      "beta": 20.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 100.0,
+      "beta": 1.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 100.0,
+      "beta": 5.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 100.0,
+      "beta": 10.0
+    },
+    {
+      "family": "TipAdapter",
+      "alpha": 100.0,
+      "beta": 20.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.001,
+      "beta": 0.1
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.001,
+      "beta": 1.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.001,
+      "beta": 5.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.001,
+      "beta": 10.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.01,
+      "beta": 0.1
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.01,
+      "beta": 1.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.01,
+      "beta": 5.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.01,
+      "beta": 10.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.1,
+      "beta": 0.1
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.1,
+      "beta": 1.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.1,
+      "beta": 5.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 0.1,
+      "beta": 10.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 1.0,
+      "beta": 0.1
+    },
+    {
+      "family": "ProKeR",
+      "lam": 1.0,
+      "beta": 1.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 1.0,
+      "beta": 5.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 1.0,
+      "beta": 10.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 10.0,
+      "beta": 0.1
+    },
+    {
+      "family": "ProKeR",
+      "lam": 10.0,
+      "beta": 1.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 10.0,
+      "beta": 5.0
+    },
+    {
+      "family": "ProKeR",
+      "lam": 10.0,
+      "beta": 10.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_global",
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.2689414213699951
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_semantic",
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 0,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 8,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "RDA_transport",
+      "transport": true,
+      "neighbors": 16,
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    }
+  ],
+  "selection": "highest four-seed development macro per family; deterministic candidate order for ties",
+  "confirmation_policy": "one evaluation after selection freeze; no reselection",
+  "test_policy": "Flowers exploratory because round1 test known; DTD transfer with unchanged parameters",
+  "partition_sha256": "dc6e385d888141772ab0bd37ff1a825dd3146af34545357a751d56536644f42c",
+  "first_round_lock_sha256": "5bf351fed57bcc38aa2840c9c7d08dd45c94d7b00029232d67b9c4636c62b84d",
+  "amended_before_any_development_scoring_utc": "2026-11-16T14:15:19.173635+00:00",
+  "amendment": "Add minimal prototype rotation before covariance pooling (24 candidates); add matched global and untransported ablations; no results examined."
+}

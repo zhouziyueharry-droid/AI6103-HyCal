@@ -1,0 +1,11 @@
+pattern,test_index,path,true,cosine_pred,md_pred,n_same_kind,cos_score_true,cos_score_wrong,md_score_true,md_score_wrong
+fixed,1306,Forest/Forest_1121.jpg,Forest,Sea or Lake,Forest,210,0.8655127882957458,0.963570237159729,0.8699253797531128,0.8618097305297852
+fixed,503,AnnualCrop/AnnualCrop_2129.jpg,Annual Crop Land,Permanent Crop Land,Annual Crop Land,248,0.42511463165283203,0.8198915719985962,0.8291544914245605,0.8231827616691589
+fixed,559,AnnualCrop/AnnualCrop_1702.jpg,Annual Crop Land,Herbaceous Vegetation Land,Annual Crop Land,5,0.7622426152229309,0.8705024123191833,0.920914888381958,0.8747872114181519
+broken,7515,SeaLake/SeaLake_485.jpg,Sea or Lake,Sea or Lake,Forest,121,0.8874050974845886,0.8790043592453003,0.7657067179679871,0.8737462759017944
+broken,3359,Highway/Highway_54.jpg,Highway or Road,Highway or Road,River,14,0.8639874458312988,0.8313686847686768,0.7746938467025757,0.8928143382072449
+both,581,AnnualCrop/AnnualCrop_682.jpg,Annual Crop Land,Permanent Crop Land,Permanent Crop Land,146,0.47016164660453796,0.9029408097267151,0.7749571800231934,0.9522182941436768
+both,5150,PermanentCrop/PermanentCrop_2482.jpg,Permanent Crop Land,Annual Crop Land,Annual Crop Land,50,0.5768985748291016,0.9416491985321045,0.6224547028541565,0.8784106969833374
+both,3770,Industrial/Industrial_777.jpg,Industrial Buildings,Residential Buildings,Residential Buildings,70,0.6500731110572815,0.9307742714881897,0.6218696236610413,0.9341124296188354
+both,3054,Highway/Highway_1596.jpg,Highway or Road,River,River,20,0.750389575958252,0.8683876991271973,0.7247538566589355,0.9445555210113525
+both,2309,HerbaceousVegetation/HerbaceousVegetation_1308.jpg,Herbaceous Vegetation Land,Forest,Forest,11,0.8180481195449829,0.923735499382019,0.7526282668113708,0.8783044815063477

@@ -1,0 +1,16 @@
+{
+  "selected_lambda": 1e-05,
+  "validation_macro_means": {
+    "1e-05": 91.5251807615256,
+    "0.0001": 91.5047559249243,
+    "0.001": 91.49666784806459
+  },
+  "provenance": {
+    "config_sha256": "28522dc78b49a118c3db2d65314f85cefcd448daba73791f634203105ab1b94a",
+    "support_sha256": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "feature_sha256": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352",
+    "core_sha256": "164ab5028db4c72186131b5cf323b8c2e23951ad65bce10bfa71dacd7e43630c"
+  },
+  "frozen_at_utc": "2026-11-16T06:58:46.897485+00:00",
+  "purpose": "equal-sized three-candidate validation search control; no test-driven choice"
+}

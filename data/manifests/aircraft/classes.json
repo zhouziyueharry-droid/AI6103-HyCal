@@ -1,0 +1,502 @@
+[
+  {
+    "label": 0,
+    "classname": "707-320",
+    "global_id": "aircraft:0"
+  },
+  {
+    "label": 1,
+    "classname": "727-200",
+    "global_id": "aircraft:1"
+  },
+  {
+    "label": 2,
+    "classname": "737-200",
+    "global_id": "aircraft:2"
+  },
+  {
+    "label": 3,
+    "classname": "737-300",
+    "global_id": "aircraft:3"
+  },
+  {
+    "label": 4,
+    "classname": "737-400",
+    "global_id": "aircraft:4"
+  },
+  {
+    "label": 5,
+    "classname": "737-500",
+    "global_id": "aircraft:5"
+  },
+  {
+    "label": 6,
+    "classname": "737-600",
+    "global_id": "aircraft:6"
+  },
+  {
+    "label": 7,
+    "classname": "737-700",
+    "global_id": "aircraft:7"
+  },
+  {
+    "label": 8,
+    "classname": "737-800",
+    "global_id": "aircraft:8"
+  },
+  {
+    "label": 9,
+    "classname": "737-900",
+    "global_id": "aircraft:9"
+  },
+  {
+    "label": 10,
+    "classname": "747-100",
+    "global_id": "aircraft:10"
+  },
+  {
+    "label": 11,
+    "classname": "747-200",
+    "global_id": "aircraft:11"
+  },
+  {
+    "label": 12,
+    "classname": "747-300",
+    "global_id": "aircraft:12"
+  },
+  {
+    "label": 13,
+    "classname": "747-400",
+    "global_id": "aircraft:13"
+  },
+  {
+    "label": 14,
+    "classname": "757-200",
+    "global_id": "aircraft:14"
+  },
+  {
+    "label": 15,
+    "classname": "757-300",
+    "global_id": "aircraft:15"
+  },
+  {
+    "label": 16,
+    "classname": "767-200",
+    "global_id": "aircraft:16"
+  },
+  {
+    "label": 17,
+    "classname": "767-300",
+    "global_id": "aircraft:17"
+  },
+  {
+    "label": 18,
+    "classname": "767-400",
+    "global_id": "aircraft:18"
+  },
+  {
+    "label": 19,
+    "classname": "777-200",
+    "global_id": "aircraft:19"
+  },
+  {
+    "label": 20,
+    "classname": "777-300",
+    "global_id": "aircraft:20"
+  },
+  {
+    "label": 21,
+    "classname": "A300B4",
+    "global_id": "aircraft:21"
+  },
+  {
+    "label": 22,
+    "classname": "A310",
+    "global_id": "aircraft:22"
+  },
+  {
+    "label": 23,
+    "classname": "A318",
+    "global_id": "aircraft:23"
+  },
+  {
+    "label": 24,
+    "classname": "A319",
+    "global_id": "aircraft:24"
+  },
+  {
+    "label": 25,
+    "classname": "A320",
+    "global_id": "aircraft:25"
+  },
+  {
+    "label": 26,
+    "classname": "A321",
+    "global_id": "aircraft:26"
+  },
+  {
+    "label": 27,
+    "classname": "A330-200",
+    "global_id": "aircraft:27"
+  },
+  {
+    "label": 28,
+    "classname": "A330-300",
+    "global_id": "aircraft:28"
+  },
+  {
+    "label": 29,
+    "classname": "A340-200",
+    "global_id": "aircraft:29"
+  },
+  {
+    "label": 30,
+    "classname": "A340-300",
+    "global_id": "aircraft:30"
+  },
+  {
+    "label": 31,
+    "classname": "A340-500",
+    "global_id": "aircraft:31"
+  },
+  {
+    "label": 32,
+    "classname": "A340-600",
+    "global_id": "aircraft:32"
+  },
+  {
+    "label": 33,
+    "classname": "A380",
+    "global_id": "aircraft:33"
+  },
+  {
+    "label": 34,
+    "classname": "ATR-42",
+    "global_id": "aircraft:34"
+  },
+  {
+    "label": 35,
+    "classname": "ATR-72",
+    "global_id": "aircraft:35"
+  },
+  {
+    "label": 36,
+    "classname": "An-12",
+    "global_id": "aircraft:36"
+  },
+  {
+    "label": 37,
+    "classname": "BAE 146-200",
+    "global_id": "aircraft:37"
+  },
+  {
+    "label": 38,
+    "classname": "BAE 146-300",
+    "global_id": "aircraft:38"
+  },
+  {
+    "label": 39,
+    "classname": "BAE-125",
+    "global_id": "aircraft:39"
+  },
+  {
+    "label": 40,
+    "classname": "Beechcraft 1900",
+    "global_id": "aircraft:40"
+  },
+  {
+    "label": 41,
+    "classname": "Boeing 717",
+    "global_id": "aircraft:41"
+  },
+  {
+    "label": 42,
+    "classname": "C-130",
+    "global_id": "aircraft:42"
+  },
+  {
+    "label": 43,
+    "classname": "C-47",
+    "global_id": "aircraft:43"
+  },
+  {
+    "label": 44,
+    "classname": "CRJ-200",
+    "global_id": "aircraft:44"
+  },
+  {
+    "label": 45,
+    "classname": "CRJ-700",
+    "global_id": "aircraft:45"
+  },
+  {
+    "label": 46,
+    "classname": "CRJ-900",
+    "global_id": "aircraft:46"
+  },
+  {
+    "label": 47,
+    "classname": "Cessna 172",
+    "global_id": "aircraft:47"
+  },
+  {
+    "label": 48,
+    "classname": "Cessna 208",
+    "global_id": "aircraft:48"
+  },
+  {
+    "label": 49,
+    "classname": "Cessna 525",
+    "global_id": "aircraft:49"
+  },
+  {
+    "label": 50,
+    "classname": "Cessna 560",
+    "global_id": "aircraft:50"
+  },
+  {
+    "label": 51,
+    "classname": "Challenger 600",
+    "global_id": "aircraft:51"
+  },
+  {
+    "label": 52,
+    "classname": "DC-10",
+    "global_id": "aircraft:52"
+  },
+  {
+    "label": 53,
+    "classname": "DC-3",
+    "global_id": "aircraft:53"
+  },
+  {
+    "label": 54,
+    "classname": "DC-6",
+    "global_id": "aircraft:54"
+  },
+  {
+    "label": 55,
+    "classname": "DC-8",
+    "global_id": "aircraft:55"
+  },
+  {
+    "label": 56,
+    "classname": "DC-9-30",
+    "global_id": "aircraft:56"
+  },
+  {
+    "label": 57,
+    "classname": "DH-82",
+    "global_id": "aircraft:57"
+  },
+  {
+    "label": 58,
+    "classname": "DHC-1",
+    "global_id": "aircraft:58"
+  },
+  {
+    "label": 59,
+    "classname": "DHC-6",
+    "global_id": "aircraft:59"
+  },
+  {
+    "label": 60,
+    "classname": "DHC-8-100",
+    "global_id": "aircraft:60"
+  },
+  {
+    "label": 61,
+    "classname": "DHC-8-300",
+    "global_id": "aircraft:61"
+  },
+  {
+    "label": 62,
+    "classname": "DR-400",
+    "global_id": "aircraft:62"
+  },
+  {
+    "label": 63,
+    "classname": "Dornier 328",
+    "global_id": "aircraft:63"
+  },
+  {
+    "label": 64,
+    "classname": "E-170",
+    "global_id": "aircraft:64"
+  },
+  {
+    "label": 65,
+    "classname": "E-190",
+    "global_id": "aircraft:65"
+  },
+  {
+    "label": 66,
+    "classname": "E-195",
+    "global_id": "aircraft:66"
+  },
+  {
+    "label": 67,
+    "classname": "EMB-120",
+    "global_id": "aircraft:67"
+  },
+  {
+    "label": 68,
+    "classname": "ERJ 135",
+    "global_id": "aircraft:68"
+  },
+  {
+    "label": 69,
+    "classname": "ERJ 145",
+    "global_id": "aircraft:69"
+  },
+  {
+    "label": 70,
+    "classname": "Embraer Legacy 600",
+    "global_id": "aircraft:70"
+  },
+  {
+    "label": 71,
+    "classname": "Eurofighter Typhoon",
+    "global_id": "aircraft:71"
+  },
+  {
+    "label": 72,
+    "classname": "F-16A/B",
+    "global_id": "aircraft:72"
+  },
+  {
+    "label": 73,
+    "classname": "F/A-18",
+    "global_id": "aircraft:73"
+  },
+  {
+    "label": 74,
+    "classname": "Falcon 2000",
+    "global_id": "aircraft:74"
+  },
+  {
+    "label": 75,
+    "classname": "Falcon 900",
+    "global_id": "aircraft:75"
+  },
+  {
+    "label": 76,
+    "classname": "Fokker 100",
+    "global_id": "aircraft:76"
+  },
+  {
+    "label": 77,
+    "classname": "Fokker 50",
+    "global_id": "aircraft:77"
+  },
+  {
+    "label": 78,
+    "classname": "Fokker 70",
+    "global_id": "aircraft:78"
+  },
+  {
+    "label": 79,
+    "classname": "Global Express",
+    "global_id": "aircraft:79"
+  },
+  {
+    "label": 80,
+    "classname": "Gulfstream IV",
+    "global_id": "aircraft:80"
+  },
+  {
+    "label": 81,
+    "classname": "Gulfstream V",
+    "global_id": "aircraft:81"
+  },
+  {
+    "label": 82,
+    "classname": "Hawk T1",
+    "global_id": "aircraft:82"
+  },
+  {
+    "label": 83,
+    "classname": "Il-76",
+    "global_id": "aircraft:83"
+  },
+  {
+    "label": 84,
+    "classname": "L-1011",
+    "global_id": "aircraft:84"
+  },
+  {
+    "label": 85,
+    "classname": "MD-11",
+    "global_id": "aircraft:85"
+  },
+  {
+    "label": 86,
+    "classname": "MD-80",
+    "global_id": "aircraft:86"
+  },
+  {
+    "label": 87,
+    "classname": "MD-87",
+    "global_id": "aircraft:87"
+  },
+  {
+    "label": 88,
+    "classname": "MD-90",
+    "global_id": "aircraft:88"
+  },
+  {
+    "label": 89,
+    "classname": "Metroliner",
+    "global_id": "aircraft:89"
+  },
+  {
+    "label": 90,
+    "classname": "Model B200",
+    "global_id": "aircraft:90"
+  },
+  {
+    "label": 91,
+    "classname": "PA-28",
+    "global_id": "aircraft:91"
+  },
+  {
+    "label": 92,
+    "classname": "SR-20",
+    "global_id": "aircraft:92"
+  },
+  {
+    "label": 93,
+    "classname": "Saab 2000",
+    "global_id": "aircraft:93"
+  },
+  {
+    "label": 94,
+    "classname": "Saab 340",
+    "global_id": "aircraft:94"
+  },
+  {
+    "label": 95,
+    "classname": "Spitfire",
+    "global_id": "aircraft:95"
+  },
+  {
+    "label": 96,
+    "classname": "Tornado",
+    "global_id": "aircraft:96"
+  },
+  {
+    "label": 97,
+    "classname": "Tu-134",
+    "global_id": "aircraft:97"
+  },
+  {
+    "label": 98,
+    "classname": "Tu-154",
+    "global_id": "aircraft:98"
+  },
+  {
+    "label": 99,
+    "classname": "Yak-42",
+    "global_id": "aircraft:99"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "date": "2026年11月17日",
+  "research_commit": "dc8d6a8fd2a158b517b42c715e0ae8a6894b4a2e",
+  "title": "花卉识别与跨数据集验证进度简报",
+  "subtitle": "Flowers102 + DTD + FGVC-Aircraft | 基线复现、协方差优化与迁移验证",
+  "badge": "A 域及扩展实验已完成",
+  "intro": "我负责以 Flowers102 为主的少样本分类研究。现已完成原版核对、两轮优化、三个单域验证及 Flowers→DTD 联合评估。全程冻结 CLIP，主要收益来自共享类内统计；下一步与 B、C 统一协议，验证原定三域。",
+  "cards": [
+    ["95.93%", "Flowers102 5-shot 类宏平均", "本轮方案，20 个支持集种子"],
+    ["+3.10 pp", "相对原版 H0 的提升", "较第一轮 H2 再提高 2.48 pp"],
+    ["20 / 域", "三个单域的固定支持集种子数", "4 个开发种子 + 16 个补充种子"]
+  ],
+  "work": [
+    ["数据与特征", "Flowers/DTD 使用 CoOp 划分，Aircraft 使用官方 variants 划分；统一 CLIP ViT-B/16、单裁剪和通用提示词，缓存与支持集索引已冻结。"],
+    ["对照与消融", "保留原版 H0、第一轮 H2、GDA、全局池化与尺度/投影控制；参数只在 Flowers 开发集选择，冻结后迁移。"],
+    ["迁移与联合", "DTD、Aircraft 无额外调参；Flowers→DTD 共 149 类同时竞争，测试时不给真实领域标签；补充 Flowers 10-shot。"],
+    ["核验与交付", "22 项数值/协议测试通过；2,048 份预测文件独立复算。源代码、统计表、图表、索引及四组特征缓存随包交付。"]
+  ],
+  "mechanism": "Cosine 判断图像与类别原型的方向是否接近，Mahalanobis 距离考虑类内变化的形状。5-shot 下每类样本很少，共享训练类的类内变化可稳定统计估计，再结合图文归一化的尺度和方向投影。",
+  "mechanism_callout": "观察结论：大部分涨点来自共享协方差；完整方向投影相对只校正尺度的额外收益较小，并未在所有端点成立。共享、收缩及一阶协方差传播均有已有方法基础。",
+  "protocol_callout": "口径说明：A 的 H0 沿用已冻结高规模脚本设置，n_min_p=10、scale=5，5-shot 时退化为 Cosine。H2 为提前启用距离分支加对角收缩。C 简报：脚本阈值 20、Baseline 阈值 5，合并前需统一。",
+  "core_table": {
+    "headers": ["5-shot 数据集", "原版 H0", "首轮方案 H2", "本轮方案", "本轮 - H0"],
+    "rows": [
+      ["Flowers102", "92.83%", "93.45%", "95.93%", "+3.10 pp"],
+      ["DTD", "57.93%", "59.23%", "63.04%", "+5.12 pp"],
+      ["FGVC-Aircraft", "34.31%", "35.29%", "38.50%", "+4.19 pp"]
+    ]
+  },
+  "core_note": "均为 20 个相同支持集种子的类宏平均准确率；pp 为百分点。H2 是首轮方案在各域的对照，并非各域都做过首轮实验。均值±标准差、配对区间及 Top-1 见详细报告。Flowers Test 曾用于前轮，本轮属于探索性复评。",
+  "comparison_intro": "本轮方案为共享视觉协方差经归一化传播（代码名 Propagation）。完整投影、只校正尺度和未变换先验分别选参，最终均选中混合比例 0.5、ridge=1e-4、纯距离评分。",
+  "comparison_table": {
+    "headers": ["5-shot 数据集", "GDA", "全局池化", "仅尺度校正", "完整投影"],
+    "rows": [
+      ["Flowers102", "95.64%", "95.74%", "95.88%", "95.93%"],
+      ["DTD", "63.00%", "62.84%", "62.94%", "63.04%"],
+      ["FGVC-Aircraft", "38.41%", "38.28%", "38.46%", "38.50%"]
+    ]
+  },
+  "comparison_note": "相对 GDA：Flowers +0.29 pp，DTD +0.04 pp，Aircraft +0.09 pp；后两者的名义配对区间跨零。以上为统一特征和有限网格的公式对照，不等同于各原论文完整复现。",
+  "extra_table": {
+    "headers": ["补充验证", "原版 H0", "本轮方案", "提升"],
+    "rows": [
+      ["联合 149 类 / 两域等权宏平均", "75.05%", "79.47%", "+4.42 pp"],
+      ["Flowers 10-shot / 类宏平均", "95.65%", "97.40%", "+1.75 pp"]
+    ]
+  },
+  "extra_note": "联合结果为 20 种子；10-shot 仅 4 种子，沿用 5-shot 参数。10-shot 的仅尺度方案为 97.45%，略高于完整投影，二者差值区间跨零。",
+  "findings_intro": "Flowers 相对 H2：102 类中 82 类平均改善、8 类下降、12 类持平；类别变化并不一致。",
+  "positive": [["canterbury bells", "+21.67 pp"], ["bolero deep blue", "+19.17 pp"]],
+  "negative": [["mallow", "-3.50 pp"], ["sunflower", "-0.79 pp"]],
+  "findings_note": "上述为事后描述性例子；两个增益类别各仅 12 张 Test 图像，不作逐类显著性声明。seed 0 的 Flowers 修正 H2 错误 79 张，同时新增错误 12 张；案例图同时保留两类情况。",
+  "limitations": [
+    ["探索性与统计边界", "Flowers 的开发/确认划分都来自前轮用过的验证集；20 种子中 4 个用于选参。区间只反映固定 Test 上的支持集变化，未校正多重比较。"],
+    ["机制与创新边界", "投影的独立增益小，DTD/Aircraft 未稳定超过 GDA；不能把全部涨点归为新的几何贡献。"],
+    ["增量验证范围", "联合是离线两域模拟，未完成原定三域或不均衡 K 验证。旧域 20 种子均值变化 +0.065 pp，四种子诊断为 -0.089 pp，不能声称消除遗忘。"]
+  ],
+  "cooperation": [
+    ["Member A", "提供两页简报、完整统计/消融、案例、代码、冻结索引及特征缓存。"],
+    ["A、B、C", "统一阈值、融合尺度、shot、评价指标与缓存接口，明确共享统计的范围。"],
+    ["全组", "合并 Flowers / OrganAMNIST / EuroSAT，验证全候选竞争及不均衡 K，再确定统一方法。"]
+  ],
+  "takeaway": "一句话总结：共享统计将 Flowers 5-shot 从 92.83% 提至 95.93%，并在两个扩展域保留收益；独立几何贡献较小，下一步应在统一协议下验证原定三域。",
+  "record": "CLIP ViT-B/16 · 单域 Test：2,463 / 1,692 / 3,333 张 · 5-shot：20 seeds · 10-shot：4 seeds",
+  "sources": [
+    "reports/part_a_round2/report.md",
+    "reports/part_a_round2/analysis/summary.csv",
+    "reports/part_a_round2/analysis/summary_aircraft.csv",
+    "reports/part_a_round2/analysis/summary_10shot.csv",
+    "reports/part_a_round2/analysis/flowers_class_effects.csv",
+    "reports/part_a_round2/complete_prediction_audit.json"
+  ]
+}

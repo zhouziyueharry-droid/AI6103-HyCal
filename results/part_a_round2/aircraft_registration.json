@@ -1,0 +1,11 @@
+{
+  "registered_utc": "2026-11-16T14:37:36.028584+00:00",
+  "files": {
+    "reports/part_a_round2/aircraft_transfer_protocol.md": "5595479bba135a33457cb4371e967d50f3eef421b04fa71cac678efa1e90e3e3",
+    "scripts/run_aircraft_round2.py": "046fb57b21a30f82781e149e6ced2e523aa046378afab37612ff7150c560a456",
+    "results/part_a_round2/selection.json": "997a4c0fa03e0cd15cb7898d229141ba81a75bc2f5eef2040fb5780906dfbaef",
+    "results/part_a_round2/propagation/selection.json": "99bb685467701955fd3a6c641c7a480636c1082732d4d67fdb83b4968fdfca17"
+  },
+  "phase_note": "Flowers test underway; no DTD or joint test results inspected",
+  "no_retuning": true
+}

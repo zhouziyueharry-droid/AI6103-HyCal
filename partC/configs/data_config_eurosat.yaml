@@ -1,0 +1,8 @@
+backbone: 'ViT-B/16'
+datasets: ["eurosat"]
+
+data_root: ./data
+batch_size: 128
+num_workers: 4
+
+augmentation_time: 1

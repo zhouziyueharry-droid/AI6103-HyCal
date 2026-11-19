@@ -1,0 +1,1500 @@
+{
+  "frozen_utc": "2026-11-16T14:31:17.798708+00:00",
+  "provenance": {
+    "src/round2_core.py": "2db8150848b9e446f693ea59c5438d39b12e99c33793a1e5d93501af4a6a932c",
+    "scripts/run_round2.py": "517634c7a5f98025b6a12d4dd28ef58ff4f9922521b859c885623d9e2185d78e",
+    "configs/round2.json": "9e1d01e57bd15e8d8cd4a59e311363b4d9d2a1728948abbb132cef3c14d9940f",
+    "data/manifests/flowers102/round2_validation.json": "dc6e385d888141772ab0bd37ff1a825dd3146af34545357a751d56536644f42c",
+    "results/part_a/execution_lock.json": "5bf351fed57bcc38aa2840c9c7d08dd45c94d7b00029232d67b9c4636c62b84d",
+    "src/hycal_core.py": "164ab5028db4c72186131b5cf323b8c2e23951ad65bce10bfa71dacd7e43630c",
+    "scripts/run_experiments.py": "0366b86794bc83811f23287ae923d297831073cd2d33e23fb2227016ef7e399f",
+    "data/manifests/flowers102/records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "data/manifests/flowers102/support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "data/manifests/flowers102/replication_support_indices.json": "0ebcc8bcfc7542bfc07e5762e5a0251e5bcacf15629ad08e2e430050cf01fc7d",
+    "artifacts/features/flowers102/features.pt": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352"
+  },
+  "selected": [
+    {
+      "config": {
+        "family": "H0"
+      },
+      "macro": 91.16044909253114,
+      "top1": 91.83480453972257
+    },
+    {
+      "config": {
+        "family": "H2"
+      },
+      "macro": 91.98974392337396,
+      "top1": 92.49684741488021
+    },
+    {
+      "config": {
+        "family": "MD"
+      },
+      "macro": 92.0778583874559,
+      "top1": 92.52837326607818
+    },
+    {
+      "config": {
+        "family": "CLIP"
+      },
+      "macro": 64.7332042624339,
+      "top1": 65.06935687263557
+    },
+    {
+      "config": {
+        "family": "VisualPrototype"
+      },
+      "macro": 90.98168428721834,
+      "top1": 91.58259773013872
+    },
+    {
+      "config": {
+        "family": "H2_weight",
+        "weight": 0.5
+      },
+      "macro": 92.12527377736356,
+      "top1": 92.52837326607819
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 1.0
+      },
+      "macro": 94.5155133036325,
+      "top1": 94.73518284993695
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 100.0,
+        "beta": 20.0
+      },
+      "macro": 87.76916305515377,
+      "top1": 88.83984867591425
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 1.0,
+        "beta": 10.0
+      },
+      "macro": 92.69400146780177,
+      "top1": 93.0643127364439
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.65339831593701,
+      "top1": 94.9873896595208
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.12084045984975,
+      "top1": 93.53720050441362
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.57939756178921,
+      "top1": 94.92433795712485
+    },
+    {
+      "config": {
+        "family": "RDA_random_ablation",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0,
+        "neighbor_mode": "random"
+      },
+      "selected_by": "matched semantic config"
+    },
+    {
+      "config": {
+        "family": "RDA_local_ablation",
+        "neighbors": 16,
+        "alpha": 0.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "selected_by": "matched semantic config"
+    },
+    {
+      "config": {
+        "family": "RDA_global_matched",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "selected_by": "matched semantic config"
+    },
+    {
+      "config": {
+        "family": "RDA_rawmean_ablation",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0,
+        "rawmean_center": true
+      },
+      "selected_by": "matched semantic config"
+    },
+    {
+      "config": {
+        "family": "RDA_logdet_ablation",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0,
+        "logdet": true
+      },
+      "selected_by": "matched semantic config"
+    },
+    {
+      "config": {
+        "family": "RDA_untransported_matched",
+        "transport": false,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "selected_by": "matched transported config"
+    }
+  ],
+  "ranking": [
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.65339831593701,
+      "top1": 94.9873896595208
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.57939756178921,
+      "top1": 94.92433795712485
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 1.0
+      },
+      "macro": 94.5155133036325,
+      "top1": 94.73518284993695
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 10.0
+      },
+      "macro": 94.44305667815729,
+      "top1": 94.4829760403531
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 100.0
+      },
+      "macro": 94.44305667815729,
+      "top1": 94.4829760403531
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.35583297851099,
+      "top1": 94.640605296343
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.21374943569216,
+      "top1": 94.57755359394703
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 94.07960652844326,
+      "top1": 94.54602774274906
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 93.63871727350602,
+      "top1": 94.13619167717528
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.43717940699365,
+      "top1": 93.9155107187894
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.41372144081123,
+      "top1": 93.9155107187894
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.19038488601183,
+      "top1": 93.63177805800757
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.14083429756805,
+      "top1": 93.60025220680959
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.12084045984975,
+      "top1": 93.53720050441362
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.11889795790725,
+      "top1": 93.5687263556116
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.10701441661195,
+      "top1": 93.53720050441362
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 93.09470037759512,
+      "top1": 93.63177805800757
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.0897722060648,
+      "top1": 93.53720050441362
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 92.94676777900463,
+      "top1": 93.41109709962168
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.80875266517683,
+      "top1": 93.41109709962168
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.79569289786008,
+      "top1": 93.3795712484237
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.77021339656788,
+      "top1": 93.47414880201765
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.7677431214583,
+      "top1": 93.3795712484237
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 92.76421795152446,
+      "top1": 93.25346784363178
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.75765474062689,
+      "top1": 93.31651954602773
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 92.69428537578693,
+      "top1": 93.2219419924338
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 1.0,
+        "beta": 10.0
+      },
+      "macro": 92.69400146780177,
+      "top1": 93.0643127364439
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 92.62580040501867,
+      "top1": 93.19041614123581
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.48564257523236,
+      "top1": 93.12736443883985
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 1.0,
+        "beta": 5.0
+      },
+      "macro": 92.47536144769117,
+      "top1": 92.81210592686003
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 92.47241917868853,
+      "top1": 92.96973518284993
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 92.47043583208443,
+      "top1": 93.00126103404791
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.45775970388974,
+      "top1": 93.09583858764186
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.44953489206586,
+      "top1": 93.12736443883985
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 92.44466911514125,
+      "top1": 92.93820933165196
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.41865482442107,
+      "top1": 92.96973518284994
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.41124941163642,
+      "top1": 92.875157629256
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.38899809197797,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.358360837076,
+      "top1": 92.875157629256
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.35762312735997,
+      "top1": 93.0327868852459
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.34588993451223,
+      "top1": 92.81210592686003
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 92.34217156682327,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.32132976386072,
+      "top1": 93.00126103404793
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.29353234055246,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.27214377040228,
+      "top1": 92.81210592686003
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.26137180529597,
+      "top1": 92.90668348045396
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.24519356059602,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.23724238294672,
+      "top1": 92.84363177805801
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.22434248614589,
+      "top1": 92.81210592686003
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.19328626023673,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.19328626023673,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 92.14001555003877,
+      "top1": 92.74905422446406
+    },
+    {
+      "config": {
+        "family": "H2_weight",
+        "weight": 0.5
+      },
+      "macro": 92.12527377736356,
+      "top1": 92.52837326607819
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 92.09038402401406,
+      "top1": 92.74905422446406
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 92.08210934662173,
+      "top1": 92.74905422446406
+    },
+    {
+      "config": {
+        "family": "MD"
+      },
+      "macro": 92.0778583874559,
+      "top1": 92.52837326607818
+    },
+    {
+      "config": {
+        "family": "H2"
+      },
+      "macro": 91.98974392337396,
+      "top1": 92.49684741488021
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 91.98518761367058,
+      "top1": 92.49684741488021
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 91.98512933574852,
+      "top1": 92.6860025220681
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 91.9640236712605,
+      "top1": 92.65447667087011
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.91169127856435,
+      "top1": 92.59142496847414
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.90606173152614,
+      "top1": 92.46532156368222
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 91.90063776809131,
+      "top1": 92.71752837326608
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 91.89327584896469,
+      "top1": 92.43379571248424
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.87732638448583,
+      "top1": 92.49684741488021
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.85293947252151,
+      "top1": 92.46532156368222
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.8527927753934,
+      "top1": 92.46532156368222
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.8420373486163,
+      "top1": 92.52837326607818
+    },
+    {
+      "config": {
+        "family": "RDA_global",
+        "neighbors": 0,
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.83543855525281,
+      "top1": 92.4968474148802
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 91.82636743917705,
+      "top1": 92.37074401008827
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 91.78714899651432,
+      "top1": 92.62295081967213
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.76542214235712,
+      "top1": 92.3076923076923
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.68452354462416,
+      "top1": 92.40226986128626
+    },
+    {
+      "config": {
+        "family": "H2_weight",
+        "weight": 1.0
+      },
+      "macro": 91.6609625720671,
+      "top1": 91.89785624211854
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.53938592367385,
+      "top1": 92.11853720050442
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 91.45784409948497,
+      "top1": 91.89785624211854
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 91.4150027603975,
+      "top1": 92.21311475409836
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 91.38881707244711,
+      "top1": 92.08701134930644
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 91.34694377689733,
+      "top1": 92.18158890290037
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.2689414213699951
+      },
+      "macro": 91.32547300910304,
+      "top1": 92.02395964691047
+    },
+    {
+      "config": {
+        "family": "H0"
+      },
+      "macro": 91.16044909253114,
+      "top1": 91.83480453972257
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 91.09848955940286,
+      "top1": 91.9609079445145
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 91.05275997652159,
+      "top1": 91.70870113493064
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 91.05221007707463,
+      "top1": 91.67717528373267
+    },
+    {
+      "config": {
+        "family": "VisualPrototype"
+      },
+      "macro": 90.98168428721834,
+      "top1": 91.58259773013872
+    },
+    {
+      "config": {
+        "family": "RDA_transport",
+        "transport": true,
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 90.70303771019715,
+      "top1": 91.7717528373266
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 90.6080074681081,
+      "top1": 91.67717528373265
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 1.0,
+        "beta": 1.0
+      },
+      "macro": 90.24432023658031,
+      "top1": 90.63682219419924
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 8,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 89.97472294289244,
+      "top1": 90.66834804539722
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 0.1
+      },
+      "macro": 89.4654934347272,
+      "top1": 90.06935687263555
+    },
+    {
+      "config": {
+        "family": "RDA_semantic",
+        "neighbors": 16,
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 88.7633832169436,
+      "top1": 89.94325346784363
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 100.0,
+        "beta": 20.0
+      },
+      "macro": 87.76916305515377,
+      "top1": 88.83984867591425
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 100.0,
+        "beta": 10.0
+      },
+      "macro": 86.74934848290111,
+      "top1": 87.67339218158891
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 100.0,
+        "beta": 1.0
+      },
+      "macro": 86.49378458801833,
+      "top1": 87.70491803278688
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 100.0,
+        "beta": 5.0
+      },
+      "macro": 85.95421483114981,
+      "top1": 86.88524590163934
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 10.0,
+        "beta": 10.0
+      },
+      "macro": 84.90145204812387,
+      "top1": 87.16897856242119
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.1,
+        "beta": 5.0
+      },
+      "macro": 84.84806551950516,
+      "top1": 86.41235813366961
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 10.0,
+        "beta": 5.0
+      },
+      "macro": 84.42233693665581,
+      "top1": 86.31778058007566
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.1,
+        "beta": 10.0
+      },
+      "macro": 83.6664700180567,
+      "top1": 85.62421185372006
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 10.0,
+        "beta": 20.0
+      },
+      "macro": 83.23044875947353,
+      "top1": 85.78184110970996
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.1,
+        "beta": 1.0
+      },
+      "macro": 80.63562183144226,
+      "top1": 82.40857503152586
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 10.0,
+        "beta": 1.0
+      },
+      "macro": 76.98058088712114,
+      "top1": 79.03530895334174
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 1.0,
+        "beta": 0.1
+      },
+      "macro": 75.43014052603608,
+      "top1": 75.22068095838587
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.1,
+        "beta": 0.1
+      },
+      "macro": 74.32528803755584,
+      "top1": 75.09457755359395
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 1.0,
+        "beta": 10.0
+      },
+      "macro": 73.03497699503663,
+      "top1": 74.24337957124843
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 0.01
+      },
+      "macro": 72.99882298391222,
+      "top1": 73.77049180327869
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 1.0,
+        "beta": 5.0
+      },
+      "macro": 72.31085076007449,
+      "top1": 73.32912988650693
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 1.0,
+        "beta": 20.0
+      },
+      "macro": 71.20990811245318,
+      "top1": 72.41488020176544
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 10.0,
+        "beta": 10.0
+      },
+      "macro": 70.1091419258989,
+      "top1": 69.67213114754098
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.01,
+        "beta": 5.0
+      },
+      "macro": 69.88610609831699,
+      "top1": 70.55485498108449
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.01,
+        "beta": 10.0
+      },
+      "macro": 69.2516422826248,
+      "top1": 70.01891551071878
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.01,
+        "beta": 1.0
+      },
+      "macro": 69.04984021851395,
+      "top1": 69.73518284993695
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.01,
+        "beta": 0.1
+      },
+      "macro": 67.74931862967968,
+      "top1": 68.19041614123581
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 1.0,
+        "beta": 1.0
+      },
+      "macro": 67.03798679702432,
+      "top1": 67.74905422446406
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 0.001
+      },
+      "macro": 66.11410335475851,
+      "top1": 66.83480453972257
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 0.1,
+        "beta": 5.0
+      },
+      "macro": 66.06984954212234,
+      "top1": 66.7717528373266
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 0.1,
+        "beta": 10.0
+      },
+      "macro": 66.06712623057551,
+      "top1": 66.7717528373266
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 0.1,
+        "beta": 20.0
+      },
+      "macro": 65.79718762085362,
+      "top1": 66.39344262295081
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.001,
+        "beta": 1.0
+      },
+      "macro": 65.7506202256703,
+      "top1": 66.2673392181589
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.001,
+        "beta": 5.0
+      },
+      "macro": 65.69762039325872,
+      "top1": 66.17276166456494
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.001,
+        "beta": 10.0
+      },
+      "macro": 65.64465639389378,
+      "top1": 66.078184110971
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 0.001,
+        "beta": 0.1
+      },
+      "macro": 65.3844946931361,
+      "top1": 65.66834804539722
+    },
+    {
+      "config": {
+        "family": "TipAdapter",
+        "alpha": 0.1,
+        "beta": 1.0
+      },
+      "macro": 65.04460446354,
+      "top1": 65.38461538461539
+    },
+    {
+      "config": {
+        "family": "CLIP"
+      },
+      "macro": 64.7332042624339,
+      "top1": 65.06935687263557
+    },
+    {
+      "config": {
+        "family": "GDA",
+        "alpha": 0.0001
+      },
+      "macro": 64.7332042624339,
+      "top1": 65.06935687263557
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 10.0,
+        "beta": 5.0
+      },
+      "macro": 57.631180065777585,
+      "top1": 56.998738965952086
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 10.0,
+        "beta": 1.0
+      },
+      "macro": 22.18711901113786,
+      "top1": 20.01891551071879
+    },
+    {
+      "config": {
+        "family": "ProKeR",
+        "lam": 10.0,
+        "beta": 0.1
+      },
+      "macro": 4.485294117647059,
+      "top1": 2.6166456494325345
+    }
+  ]
+}

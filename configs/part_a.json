@@ -1,0 +1,21 @@
+{
+  "upstream_commit": "4558fb7fa6aa389310c9e9dc7db7c2cbebc84a41",
+  "model": "ViT-B/16",
+  "weight_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+  "template": "a photo of a {}.",
+  "fusion": "sum",
+  "precision": "float32",
+  "preprocessing": "upstream val_preprocess for all splits",
+  "seeds": [0, 1, 42, 1993],
+  "primary_shot": 5,
+  "secondary_shots": [1, 10],
+  "lambda_reg": 0.0001,
+  "n_min_p": 10,
+  "scale": 5,
+  "rho_candidates": [0.0, 0.5, 1.0],
+  "selection_metric": "validation macro accuracy averaged across the four seeds",
+  "selection_tie_break": "smaller rho",
+  "test_policy": "score only after selection.json is frozen",
+  "batch_size_encoding": 32,
+  "batch_size_scoring": 128
+}

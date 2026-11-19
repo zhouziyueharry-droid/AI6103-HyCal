@@ -1,0 +1,23 @@
+{
+  "created_at_utc": "2026-11-16T06:52:17.850055+00:00",
+  "python_version": "3.13.0",
+  "manifest_sha256": {
+    "records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "classes.json": "0878edb10ed08b3cca93339e7be4a4950b5789ced935a52388588faf327291b4",
+    "support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff"
+  },
+  "official_oxford_mat_labels_match_all_records": true,
+  "original_mat_label_count": 8189,
+  "pillow_image_verify_count": 8189,
+  "official_hycal_10shot_sampling_ids_and_order_match_seeds": [
+    0,
+    1,
+    42,
+    1993
+  ],
+  "official_sampling_validation_method": "Extracted and executed unchanged generate_fewshot_dataset and split_dataset_by_label methods using AST from the pinned official HyCal utils.py, with global random.seed(seed), then compared every sample ID and its order to support_indices.json.",
+  "official_sampling_code_sha256": "117f6479b57006c23717a5f4aa90aee3f9f8155bc4b4baed56e6033f5be494d9",
+  "preparation_script_read_only_verification": "python scripts/prepare_flowers.py --verify-only completed successfully on Python 3.13.0",
+  "standard_library_official_sampling_crosscheck": "All four seeds also matched under Python 3.13.0",
+  "model_results_accessed": false
+}

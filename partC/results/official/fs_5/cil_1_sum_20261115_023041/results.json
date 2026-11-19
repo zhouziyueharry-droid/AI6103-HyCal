@@ -1,0 +1,59 @@
+{
+  "task_accuracies": [
+    {
+      "eurosat": 71.90123456790124
+    }
+  ],
+  "class_accuracies": [
+    {
+      "eurosat": {
+        "Annual Crop Land satellite location": 47.888888888888886,
+        "Forest satellite location": 55.55555555555556,
+        "Herbaceous Vegetation Land satellite location": 75.44444444444444,
+        "Highway or Road satellite location": 74.8,
+        "Industrial Buildings satellite location": 82.53333333333333,
+        "Pasture Land satellite location": 65.66666666666666,
+        "Permanent Crop Land satellite location": 65.73333333333333,
+        "Residential Buildings satellite location": 92.66666666666666,
+        "River satellite location": 73.46666666666667,
+        "Sea or Lake satellite location": 84.66666666666667
+      }
+    }
+  ],
+  "zero_shot_task_accuracies": [
+    {
+      "eurosat": 38.666666666666664
+    }
+  ],
+  "zero_shot_class_accuracies": [
+    {
+      "eurosat": {
+        "Annual Crop Land satellite location": 41.888888888888886,
+        "Forest satellite location": 4.0,
+        "Herbaceous Vegetation Land satellite location": 24.666666666666668,
+        "Highway or Road satellite location": 84.13333333333334,
+        "Industrial Buildings satellite location": 62.26666666666667,
+        "Pasture Land satellite location": 22.0,
+        "Permanent Crop Land satellite location": 28.26666666666667,
+        "Residential Buildings satellite location": 84.88888888888889,
+        "River satellite location": 0.5333333333333333,
+        "Sea or Lake satellite location": 31.88888888888889
+      }
+    }
+  ],
+  "task_order": [
+    "eurosat"
+  ],
+  "learning_accuracies": [],
+  "forgetting_scores": {},
+  "dataset_shots": {
+    "eurosat": 5
+  },
+  "average_forgetting": 0.0,
+  "transfer_accuracy": {},
+  "average_transfer_accuracy": null,
+  "task_avg_accuracies": [
+    71.90123456790124
+  ],
+  "overall_avg_accuracy": 71.90123456790124
+}

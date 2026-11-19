@@ -1,0 +1,237 @@
+[
+  {
+    "label": 0,
+    "classname": "banded",
+    "global_id": "dtd:0"
+  },
+  {
+    "label": 1,
+    "classname": "blotchy",
+    "global_id": "dtd:1"
+  },
+  {
+    "label": 2,
+    "classname": "braided",
+    "global_id": "dtd:2"
+  },
+  {
+    "label": 3,
+    "classname": "bubbly",
+    "global_id": "dtd:3"
+  },
+  {
+    "label": 4,
+    "classname": "bumpy",
+    "global_id": "dtd:4"
+  },
+  {
+    "label": 5,
+    "classname": "chequered",
+    "global_id": "dtd:5"
+  },
+  {
+    "label": 6,
+    "classname": "cobwebbed",
+    "global_id": "dtd:6"
+  },
+  {
+    "label": 7,
+    "classname": "cracked",
+    "global_id": "dtd:7"
+  },
+  {
+    "label": 8,
+    "classname": "crosshatched",
+    "global_id": "dtd:8"
+  },
+  {
+    "label": 9,
+    "classname": "crystalline",
+    "global_id": "dtd:9"
+  },
+  {
+    "label": 10,
+    "classname": "dotted",
+    "global_id": "dtd:10"
+  },
+  {
+    "label": 11,
+    "classname": "fibrous",
+    "global_id": "dtd:11"
+  },
+  {
+    "label": 12,
+    "classname": "flecked",
+    "global_id": "dtd:12"
+  },
+  {
+    "label": 13,
+    "classname": "freckled",
+    "global_id": "dtd:13"
+  },
+  {
+    "label": 14,
+    "classname": "frilly",
+    "global_id": "dtd:14"
+  },
+  {
+    "label": 15,
+    "classname": "gauzy",
+    "global_id": "dtd:15"
+  },
+  {
+    "label": 16,
+    "classname": "grid",
+    "global_id": "dtd:16"
+  },
+  {
+    "label": 17,
+    "classname": "grooved",
+    "global_id": "dtd:17"
+  },
+  {
+    "label": 18,
+    "classname": "honeycombed",
+    "global_id": "dtd:18"
+  },
+  {
+    "label": 19,
+    "classname": "interlaced",
+    "global_id": "dtd:19"
+  },
+  {
+    "label": 20,
+    "classname": "knitted",
+    "global_id": "dtd:20"
+  },
+  {
+    "label": 21,
+    "classname": "lacelike",
+    "global_id": "dtd:21"
+  },
+  {
+    "label": 22,
+    "classname": "lined",
+    "global_id": "dtd:22"
+  },
+  {
+    "label": 23,
+    "classname": "marbled",
+    "global_id": "dtd:23"
+  },
+  {
+    "label": 24,
+    "classname": "matted",
+    "global_id": "dtd:24"
+  },
+  {
+    "label": 25,
+    "classname": "meshed",
+    "global_id": "dtd:25"
+  },
+  {
+    "label": 26,
+    "classname": "paisley",
+    "global_id": "dtd:26"
+  },
+  {
+    "label": 27,
+    "classname": "perforated",
+    "global_id": "dtd:27"
+  },
+  {
+    "label": 28,
+    "classname": "pitted",
+    "global_id": "dtd:28"
+  },
+  {
+    "label": 29,
+    "classname": "pleated",
+    "global_id": "dtd:29"
+  },
+  {
+    "label": 30,
+    "classname": "polka-dotted",
+    "global_id": "dtd:30"
+  },
+  {
+    "label": 31,
+    "classname": "porous",
+    "global_id": "dtd:31"
+  },
+  {
+    "label": 32,
+    "classname": "potholed",
+    "global_id": "dtd:32"
+  },
+  {
+    "label": 33,
+    "classname": "scaly",
+    "global_id": "dtd:33"
+  },
+  {
+    "label": 34,
+    "classname": "smeared",
+    "global_id": "dtd:34"
+  },
+  {
+    "label": 35,
+    "classname": "spiralled",
+    "global_id": "dtd:35"
+  },
+  {
+    "label": 36,
+    "classname": "sprinkled",
+    "global_id": "dtd:36"
+  },
+  {
+    "label": 37,
+    "classname": "stained",
+    "global_id": "dtd:37"
+  },
+  {
+    "label": 38,
+    "classname": "stratified",
+    "global_id": "dtd:38"
+  },
+  {
+    "label": 39,
+    "classname": "striped",
+    "global_id": "dtd:39"
+  },
+  {
+    "label": 40,
+    "classname": "studded",
+    "global_id": "dtd:40"
+  },
+  {
+    "label": 41,
+    "classname": "swirly",
+    "global_id": "dtd:41"
+  },
+  {
+    "label": 42,
+    "classname": "veined",
+    "global_id": "dtd:42"
+  },
+  {
+    "label": 43,
+    "classname": "waffled",
+    "global_id": "dtd:43"
+  },
+  {
+    "label": 44,
+    "classname": "woven",
+    "global_id": "dtd:44"
+  },
+  {
+    "label": 45,
+    "classname": "wrinkled",
+    "global_id": "dtd:45"
+  },
+  {
+    "label": 46,
+    "classname": "zigzagged",
+    "global_id": "dtd:46"
+  }
+]

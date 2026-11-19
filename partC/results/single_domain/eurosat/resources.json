@@ -1,0 +1,11 @@
+{
+ "dataset": "eurosat",
+ "n_test": 8100,
+ "n_classes": 10,
+ "calib_seconds_mean": 0.1388639873928494,
+ "infer_seconds_mean": 0.05694227748446994,
+ "peak_rss_mb": 321.46875,
+ "feature_extract_seconds": 3520.0347077846527,
+ "feature_extract_peak_rss_mb": 1550.15625,
+ "feature_extract_peak_mps_mb": 2670.8125
+}

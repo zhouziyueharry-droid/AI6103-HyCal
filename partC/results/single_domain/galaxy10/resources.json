@@ -1,0 +1,11 @@
+{
+ "dataset": "galaxy10",
+ "n_test": 1774,
+ "n_classes": 10,
+ "calib_seconds_mean": 0.343726290596856,
+ "infer_seconds_mean": 0.03174127472771539,
+ "peak_rss_mb": 305.71875,
+ "feature_extract_seconds": 1700.2513601779938,
+ "feature_extract_peak_rss_mb": 1544.03125,
+ "feature_extract_peak_mps_mb": 2670.6875
+}

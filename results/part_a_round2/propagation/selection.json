@@ -1,0 +1,481 @@
+{
+  "frozen_utc": "2026-11-16T14:31:48.001355+00:00",
+  "provenance": {
+    "src/round2_core.py": "2db8150848b9e446f693ea59c5438d39b12e99c33793a1e5d93501af4a6a932c",
+    "scripts/run_round2.py": "517634c7a5f98025b6a12d4dd28ef58ff4f9922521b859c885623d9e2185d78e",
+    "configs/round2.json": "9e1d01e57bd15e8d8cd4a59e311363b4d9d2a1728948abbb132cef3c14d9940f",
+    "data/manifests/flowers102/round2_validation.json": "dc6e385d888141772ab0bd37ff1a825dd3146af34545357a751d56536644f42c",
+    "results/part_a/execution_lock.json": "5bf351fed57bcc38aa2840c9c7d08dd45c94d7b00029232d67b9c4636c62b84d",
+    "src/hycal_core.py": "164ab5028db4c72186131b5cf323b8c2e23951ad65bce10bfa71dacd7e43630c",
+    "scripts/run_experiments.py": "0366b86794bc83811f23287ae923d297831073cd2d33e23fb2227016ef7e399f",
+    "data/manifests/flowers102/records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "data/manifests/flowers102/support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "data/manifests/flowers102/replication_support_indices.json": "0ebcc8bcfc7542bfc07e5762e5a0251e5bcacf15629ad08e2e430050cf01fc7d",
+    "artifacts/features/flowers102/features.pt": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352",
+    "src/propagation_core.py": "bc11d1cc527b79b8383c907f056b2ae6210fefc0e11712056a86369f4d81bdc0",
+    "scripts/run_propagation_round2.py": "79055a94541bc35fb9e5119346c872734cfbae079e7cbe06560fe97850d3e554",
+    "configs/propagation_round2.json": "423f3c3040e33a1aa0e00880cfb365711dd82d499d64e8d858f6bb2f499b1b70",
+    "reports/part_a_round2/propagation_protocol.md": "64b6f01236467a01cd1d14e97c93db8aa6dd3f23eac6e19a9b5fcf238bad7f9f",
+    "results/part_a_round2/selection.json": "997a4c0fa03e0cd15cb7898d229141ba81a75bc2f5eef2040fb5780906dfbaef"
+  },
+  "selected": [
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.92735298327403,
+      "top1": 95.20807061790669
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.80531720315003,
+      "top1": 95.14501891551072
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.8987582120322,
+      "top1": 95.14501891551072
+    },
+    {
+      "config": {
+        "family": "Propagation_raw",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      }
+    },
+    {
+      "config": {
+        "family": "Propagation_scale",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      }
+    },
+    {
+      "config": {
+        "family": "Propagation_local",
+        "mode": "projected",
+        "alpha": 0.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.6715203655993,
+      "top1": 94.23076923076923
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 94.59940897258781,
+      "top1": 94.92433795712483
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.86934359070582,
+      "top1": 93.50567465321564
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.92735298327403,
+      "top1": 95.20807061790669
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.30794374041278,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.33442997490985,
+      "top1": 93.7578814627995
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.90035626568134,
+      "top1": 94.32534678436318
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 94.15010722084799,
+      "top1": 94.51450189155108
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 93.01101091890565,
+      "top1": 93.60025220680959
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.66863066843717,
+      "top1": 94.8297604035309
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.42066147503454,
+      "top1": 93.00126103404793
+    },
+    {
+      "config": {
+        "family": "Propagation",
+        "mode": "projected",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.17442615004535,
+      "top1": 93.60025220680959
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.50721482106931,
+      "top1": 94.04161412358134
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 93.68397661655948,
+      "top1": 94.2938209331652
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 93.33695106779473,
+      "top1": 93.88398486759142
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.80531720315003,
+      "top1": 95.14501891551072
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.68665569323464,
+      "top1": 93.25346784363177
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.88292266156044,
+      "top1": 94.23076923076923
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.46700693527319,
+      "top1": 94.01008827238336
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 92.98543590360313,
+      "top1": 93.53720050441362
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 93.43274713475952,
+      "top1": 93.94703656998739
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.38114323756739,
+      "top1": 94.640605296343
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.34989120786335,
+      "top1": 92.96973518284994
+    },
+    {
+      "config": {
+        "family": "Propagation_raw_tuned",
+        "mode": "raw",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.79374147524302,
+      "top1": 94.23076923076923
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.73436601668027,
+      "top1": 94.26229508196721
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 94.48707237128062,
+      "top1": 94.8297604035309
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 92.83792076516536,
+      "top1": 93.50567465321564
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.8987582120322,
+      "top1": 95.14501891551072
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.28561699594981,
+      "top1": 92.84363177805801
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 0.5,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.29436587234575,
+      "top1": 93.72635561160152
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 0.5
+      },
+      "macro": 93.91554396469256,
+      "top1": 94.2938209331652
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 1e-05,
+        "weight": 1.0
+      },
+      "macro": 94.17662367538301,
+      "top1": 94.57755359394703
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 0.5
+      },
+      "macro": 93.04573314112787,
+      "top1": 93.66330390920555
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 0.0001,
+        "weight": 1.0
+      },
+      "macro": 94.70162463525467,
+      "top1": 94.8297604035309
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 0.5
+      },
+      "macro": 92.29266583233301,
+      "top1": 92.90668348045398
+    },
+    {
+      "config": {
+        "family": "Propagation_scale_tuned",
+        "mode": "scale_only",
+        "alpha": 1.0,
+        "ridge": 0.001,
+        "weight": 1.0
+      },
+      "macro": 93.18903776392168,
+      "top1": 93.5687263556116
+    }
+  ]
+}

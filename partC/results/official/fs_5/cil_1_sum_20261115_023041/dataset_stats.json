@@ -1,0 +1,60 @@
+{
+  "eurosat": {
+    "train": {
+      "total_samples": 50,
+      "num_classes": 10,
+      "classes": [
+        "Annual Crop Land satellite location",
+        "Forest satellite location",
+        "Herbaceous Vegetation Land satellite location",
+        "Highway or Road satellite location",
+        "Industrial Buildings satellite location",
+        "Pasture Land satellite location",
+        "Permanent Crop Land satellite location",
+        "Residential Buildings satellite location",
+        "River satellite location",
+        "Sea or Lake satellite location"
+      ],
+      "class_counts": {
+        "Annual Crop Land satellite location": 5,
+        "Forest satellite location": 5,
+        "Herbaceous Vegetation Land satellite location": 5,
+        "Highway or Road satellite location": 5,
+        "Industrial Buildings satellite location": 5,
+        "Pasture Land satellite location": 5,
+        "Permanent Crop Land satellite location": 5,
+        "Residential Buildings satellite location": 5,
+        "River satellite location": 5,
+        "Sea or Lake satellite location": 5
+      }
+    },
+    "test": {
+      "total_samples": 8100,
+      "num_classes": 10,
+      "classes": [
+        "Annual Crop Land satellite location",
+        "Forest satellite location",
+        "Herbaceous Vegetation Land satellite location",
+        "Highway or Road satellite location",
+        "Industrial Buildings satellite location",
+        "Pasture Land satellite location",
+        "Permanent Crop Land satellite location",
+        "Residential Buildings satellite location",
+        "River satellite location",
+        "Sea or Lake satellite location"
+      ],
+      "class_counts": {
+        "Annual Crop Land satellite location": 900,
+        "Forest satellite location": 900,
+        "Herbaceous Vegetation Land satellite location": 900,
+        "Highway or Road satellite location": 750,
+        "Industrial Buildings satellite location": 750,
+        "Pasture Land satellite location": 600,
+        "Permanent Crop Land satellite location": 750,
+        "Residential Buildings satellite location": 900,
+        "River satellite location": 750,
+        "Sea or Lake satellite location": 900
+      }
+    }
+  }
+}

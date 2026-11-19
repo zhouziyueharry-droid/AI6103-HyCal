@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-11-16T14:31:44.784807+00:00",
+  "files": {
+    "src/round2_core.py": "2db8150848b9e446f693ea59c5438d39b12e99c33793a1e5d93501af4a6a932c",
+    "scripts/run_round2.py": "517634c7a5f98025b6a12d4dd28ef58ff4f9922521b859c885623d9e2185d78e",
+    "configs/round2.json": "9e1d01e57bd15e8d8cd4a59e311363b4d9d2a1728948abbb132cef3c14d9940f",
+    "data/manifests/flowers102/round2_validation.json": "dc6e385d888141772ab0bd37ff1a825dd3146af34545357a751d56536644f42c",
+    "results/part_a/execution_lock.json": "5bf351fed57bcc38aa2840c9c7d08dd45c94d7b00029232d67b9c4636c62b84d",
+    "src/hycal_core.py": "164ab5028db4c72186131b5cf323b8c2e23951ad65bce10bfa71dacd7e43630c",
+    "scripts/run_experiments.py": "0366b86794bc83811f23287ae923d297831073cd2d33e23fb2227016ef7e399f",
+    "data/manifests/flowers102/records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "data/manifests/flowers102/support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "data/manifests/flowers102/replication_support_indices.json": "0ebcc8bcfc7542bfc07e5762e5a0251e5bcacf15629ad08e2e430050cf01fc7d",
+    "artifacts/features/flowers102/features.pt": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352",
+    "src/propagation_core.py": "bc11d1cc527b79b8383c907f056b2ae6210fefc0e11712056a86369f4d81bdc0",
+    "scripts/run_propagation_round2.py": "79055a94541bc35fb9e5119346c872734cfbae079e7cbe06560fe97850d3e554",
+    "configs/propagation_round2.json": "423f3c3040e33a1aa0e00880cfb365711dd82d499d64e8d858f6bb2f499b1b70",
+    "reports/part_a_round2/propagation_protocol.md": "64b6f01236467a01cd1d14e97c93db8aa6dd3f23eac6e19a9b5fcf238bad7f9f",
+    "results/part_a_round2/selection.json": "997a4c0fa03e0cd15cb7898d229141ba81a75bc2f5eef2040fb5780906dfbaef",
+    "data\\manifests\\flowers102\\records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "data\\manifests\\flowers102\\classes.json": "0878edb10ed08b3cca93339e7be4a4950b5789ced935a52388588faf327291b4",
+    "data\\manifests\\flowers102\\support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "artifacts\\features\\flowers102\\features.pt": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352"
+  }
+}

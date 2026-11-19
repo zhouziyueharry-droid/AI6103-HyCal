@@ -1,0 +1,9 @@
+{
+    "source_csv_filename": "task_accuracies_edit.csv",
+    "S_CDE": 62.507033,
+    "S_adapt": 55.283951,
+    "S_last": 71.901235,
+    "Kt_values_used": {
+        "eurosat": 50.0
+    }
+}

@@ -1,0 +1,11 @@
+true\pred,Annual Crop Land,Forest,Herbaceous Vegetation Land,Highway or Road,Industrial Buildings,Pasture Land,Permanent Crop Land,Residential Buildings,River,Sea or Lake
+Annual Crop Land,1467,141,255,31,4,56,640,0,53,53
+Forest,10,1769,153,1,0,32,4,0,36,695
+Herbaceous Vegetation Land,106,275,2134,39,1,30,47,9,40,19
+Highway or Road,84,25,35,1577,92,92,69,58,217,1
+Industrial Buildings,40,1,8,39,1848,5,38,270,1,0
+Pasture Land,93,109,50,70,1,1280,98,2,79,18
+Permanent Crop Land,310,10,161,105,37,69,1455,68,34,1
+Residential Buildings,18,9,84,28,66,2,9,2484,0,0
+River,74,103,45,89,56,87,41,35,1704,16
+Sea or Lake,30,227,75,0,0,2,0,0,79,2287

@@ -1,0 +1,51 @@
+{
+  "locked_before_test_utc": "2026-11-16T06:59:14.205343+00:00",
+  "files": {
+    "src/hycal_core.py": "164ab5028db4c72186131b5cf323b8c2e23951ad65bce10bfa71dacd7e43630c",
+    "scripts/run_experiments.py": "0366b86794bc83811f23287ae923d297831073cd2d33e23fb2227016ef7e399f",
+    "scripts/cache_features.py": "27716fdf9c22a8b0de03087d38126cc27ee95f71e786fc533e3e132ddc68c054",
+    "scripts/verify_official.py": "8682cb8775e03ec5cce080a1d92713a40ad7c4fc7add428fd2fc4a325923519c",
+    "configs/part_a.json": "28522dc78b49a118c3db2d65314f85cefcd448daba73791f634203105ab1b94a",
+    "results/part_a/selection.json": "38a78dadb4a7a9787d6248a15ea384ce53c114f59e5df181428de67fa6cef6a2",
+    "results/part_a/selection_lambda.json": "9a6ed85576bb26055cf80a84bae28b09eab21a213264bf70d20e5e9e123739fb",
+    "results/part_a/reference_verification.json": "651daf9105c8158993e35dbdff1bc46dabac9fe7e68c4574b38298a952575013",
+    "data/manifests/flowers102/support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "data/manifests/flowers102/replication_support_indices.json": "0ebcc8bcfc7542bfc07e5762e5a0251e5bcacf15629ad08e2e430050cf01fc7d",
+    "data/manifests/flowers102/replication_protocol.json": "1232fcd9f82014aed39435ef0340247e326400e1b74b2304d53820c4abc600cc",
+    "artifacts/features/flowers102/features.pt": "cfce4b517b7d740d409f0f748fb9033116bd378e1cc068a048ddc102c3012352"
+  },
+  "primary_shots": [
+    5,
+    1,
+    10
+  ],
+  "primary_seeds": [
+    0,
+    1,
+    42,
+    1993
+  ],
+  "replication_shots": [
+    5
+  ],
+  "replication_seeds": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "selection_rho": 0.5,
+  "selected_control_lambda": 1e-05
+}

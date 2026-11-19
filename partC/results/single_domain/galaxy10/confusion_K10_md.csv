@@ -1,0 +1,11 @@
+true\pred,Disturbed,Merging,Round Smooth,In-between Round Smooth,Cigar Shaped Smooth,Barred Spiral,Unbarred Tight Spiral,Unbarred Loose Spiral,Edge-on without Bulge,Edge-on with Bulge
+Disturbed,76,31,38,25,14,18,26,63,20,13
+Merging,68,163,63,58,40,40,19,42,12,50
+Round Smooth,30,128,469,96,5,3,44,16,1,0
+In-between Round Smooth,50,111,86,209,85,12,17,8,1,30
+Cigar Shaped Smooth,5,1,0,5,57,2,4,2,8,18
+Barred Spiral,66,21,9,28,17,191,110,134,17,22
+Unbarred Tight Spiral,42,18,25,14,9,110,181,132,10,8
+Unbarred Loose Spiral,119,42,24,26,22,122,152,225,23,34
+Edge-on without Bulge,11,5,0,0,47,5,3,5,266,84
+Edge-on with Bulge,10,23,3,22,121,10,10,1,83,278

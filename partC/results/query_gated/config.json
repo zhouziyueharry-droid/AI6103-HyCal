@@ -1,0 +1,30 @@
+{
+ "n_min_p": 5,
+ "scale": 5.0,
+ "lambda_reg": 0.0001,
+ "lambda_bg": 0.0001,
+ "margin": "cosine top1-top2 (CDF-normalised)",
+ "tau_grid": [
+  0.033656418323516846,
+  0.07482391595840454,
+  0.12818342447280884
+ ],
+ "betas": [
+  1.5,
+  2.0,
+  3.0
+ ],
+ "selected": "Gated x1.5, margin<q75",
+ "selected_beta": 1.5,
+ "selected_tau": 0.12818342447280884,
+ "best_uniform": "Uniform x2.0",
+ "seeds": [
+  0,
+  1,
+  42
+ ],
+ "shots": [
+  5,
+  10
+ ]
+}

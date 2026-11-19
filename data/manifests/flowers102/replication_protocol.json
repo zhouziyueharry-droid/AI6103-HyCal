@@ -1,0 +1,60 @@
+{
+  "created_at_utc": "2026-11-16T06:54:52.020773+00:00",
+  "purpose": "Pre-registered additional support-seed replication after the original four-seed validation and before formal test evaluation.",
+  "seeds": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "shots": [
+    5
+  ],
+  "fixed_rho": 0.5,
+  "hyperparameter_reselection_allowed": false,
+  "selection_rule": "Use the already validation-selected rho=0.5 without further tuning or seed selection; evaluate all 16 pre-specified seeds.",
+  "test_scope": "Replicate fixed-parameter results with additional support draws on the same frozen Zhou test split; this is support-seed replication, not an additional independent test dataset.",
+  "test_results_read_for_registration": false,
+  "sampling": {
+    "rng": "One isolated Python random.Random(seed) instance per seed",
+    "class_order": "First encounter order in the frozen original Zhou train array, matching the original support manifest and official HyCal tracker.items()",
+    "within_class_order": "Original Zhou train array order, without sorting or shuffling",
+    "algorithm": "Traverse classes once, rng.sample(train_items, 10); take each class draw[:5]; concatenate in class encounter order",
+    "identical_to_original_support_sampling_algorithm": true,
+    "support_source": "train only",
+    "replacement": false,
+    "cross_seed_overlap": "Allowed and expected because each seed independently draws from the same fixed training pool; duplicate sample IDs are forbidden within each seed."
+  },
+  "checks": {
+    "num_seeds": 16,
+    "seed_ids_unique": true,
+    "each_seed_has_unique_sample_ids": true,
+    "all_16_ordered_support_lists_are_distinct": true,
+    "samples_per_seed": 510,
+    "num_classes": 102,
+    "shots_per_class": 5,
+    "all_support_samples_are_train_only": true,
+    "support_validation_and_test_intersections": 0,
+    "original_class_encounter_order_preserved": true,
+    "frozen_manifests_match_original_provenance_hashes": true
+  },
+  "frozen_manifest_sha256": {
+    "support_indices.json": "0eedd0e20468cdeb9d446e7a7562f675a5388f7131bbbc93d23dfd9314a6b6ff",
+    "records.json": "f70bf91d2486167b855313b9404b1d99c063bf97c5f700cce31aeb3643faf2aa",
+    "classes.json": "0878edb10ed08b3cca93339e7be4a4950b5789ced935a52388588faf327291b4",
+    "provenance.json": "d96e07ca6eef95c27702128e56ce021ae3646e399d8d4d744f248e55cda458f9"
+  },
+  "replication_support_indices_sha256": "0ebcc8bcfc7542bfc07e5762e5a0251e5bcacf15629ad08e2e430050cf01fc7d"
+}

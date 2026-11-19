@@ -1,0 +1,55 @@
+{
+ "dataset": "eurosat",
+ "split": "train",
+ "split_file": "split_zhou_EuroSAT.json",
+ "shots_per_class": 1,
+ "seed": 0,
+ "train_indices": [
+  788,
+  2361,
+  3082,
+  5030,
+  6797,
+  7497,
+  8829,
+  9871,
+  11726,
+  12733
+ ],
+ "paths": [
+  "AnnualCrop/AnnualCrop_1041.jpg",
+  "Forest/Forest_628.jpg",
+  "HerbaceousVegetation/HerbaceousVegetation_1370.jpg",
+  "Highway/Highway_1711.jpg",
+  "Industrial/Industrial_2477.jpg",
+  "Pasture/Pasture_1398.jpg",
+  "PermanentCrop/PermanentCrop_41.jpg",
+  "Residential/Residential_2918.jpg",
+  "River/River_973.jpg",
+  "SeaLake/SeaLake_488.jpg"
+ ],
+ "labels": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "class_ids": [
+  "eurosat:0",
+  "eurosat:1",
+  "eurosat:2",
+  "eurosat:3",
+  "eurosat:4",
+  "eurosat:5",
+  "eurosat:6",
+  "eurosat:7",
+  "eurosat:8",
+  "eurosat:9"
+ ]
+}

@@ -1,0 +1,288 @@
+{
+  "registered_utc": "2026-11-16T14:23:41.220383+00:00",
+  "candidates": [
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation",
+      "mode": "projected",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_raw_tuned",
+      "mode": "raw",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 0.5,
+      "ridge": 0.001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 1e-05,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 0.0001,
+      "weight": 1.0
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 0.5
+    },
+    {
+      "family": "Propagation_scale_tuned",
+      "mode": "scale_only",
+      "alpha": 1.0,
+      "ridge": 0.001,
+      "weight": 1.0
+    }
+  ],
+  "scope": "bounded follow-on development after observing initial development results, before confirmation/test",
+  "selection_seeds": [
+    0,
+    1,
+    42,
+    1993
+  ],
+  "final_seeds": [
+    0,
+    1,
+    42,
+    1993,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "amended_before_propagation_scoring_utc": "2026-11-16T14:24:53.321725+00:00",
+  "amendment": "36 configurations: independently tune raw and scale-only controls as well as full projection; use same Cholesky inverse for all propagation candidates and controls."
+}
