@@ -23,11 +23,9 @@ import os
 
 import numpy as np
 import torch
-from sklearn.metrics import f1_score
 
 import common as C
 from hycal_cached import HyCalCached
-from run_incremental import load_domain
 
 SEEDS, KS, N_MIN_P, SCALE = [0, 1, 42], [5, 10], 5, 5.0
 BETAS = [1.5, 2.0, 3.0]
@@ -61,6 +59,9 @@ def ms(v, signed=False):
 
 
 def main():
+    from sklearn.metrics import f1_score
+    from run_incremental import load_domain
+
     os.makedirs(OUT, exist_ok=True)
     # ------------------------------------------------ scores for val and test, every (dataset, K, seed)
     runs = {}

@@ -1,13 +1,15 @@
 # AI6103 · HyCal 少样本分类
 
-每类只有五张标注图时，能否通过共享各类内部的变化来改善分类？本仓库整合三个小组成员的 HyCal 实现、数据准备脚本和实验记录。所有方法使用冻结的 CLIP。团队接下来的对照是在 Flowers102 和 OrganAMNIST 上运行同一份 C 方法，固定图像、特征和评分参数，只改变协方差共享比例。
+每类只有五张标注图时，能否通过共享各类内部的变化来改善分类？本仓库整合三个小组成员的 HyCal 实现、数据准备脚本和实验记录。所有方法使用冻结的 CLIP。
+
+**小组实验结果**：在 EuroSAT 上，5-shot 时 A、B、C 的测试准确率分别为 79.68%、73.87%、79.53%，10-shot 时为 86.18%、82.62%、86.40%。[EuroSAT 三种方法的实验过程、对照和复现命令](partC/results/reverse_eurosat/README.md) · [C 在 Flowers102 和 OrganAMNIST 上的配对实验](partC/results/paired_transfer/RESULTS.md)
 
 ## 从哪里开始
 
 | 工作 | 代码 | 可复核的材料 |
 |---|---|---|
 | A · 花卉、纹理、飞机 | [算法](src/)、[数据准备与实验入口](scripts/) | [固定抽样](data/manifests/)、[预测](results/part_a_round2/)、[统计表](reports/part_a_round2/analysis/) |
-| B · 医学 CT | [OrganAMNIST 加载器](external/HyCal-CIL/task_datasets/organamnist.py)、[集群环境检查](external/HyCal-CIL/scripts/tc2_gpu_check.sh) | B 的交付包只提供了官方代码和环境检查，医学门控的最终实现及逐种子预测尚待成员补充。 |
+| B · 医学 CT | [OrganAMNIST 加载器](external/HyCal-CIL/task_datasets/organamnist.py)、[B 提供的重建版门控函数](partC/member_b_reconstructed/query_gated_hycal.py) | [EuroSAT 迁移结果与逐图记录](partC/results/reverse_eurosat/member_b_reconstructed/RESULTS.md)。原医学实验的服务器脚本与逐图预测尚待核对。 |
 | C · 卫星和星系 | [协方差估计与打分](partC/hycal_cached.py)、[固定参数消融](partC/ablation_shrink.py) | [逐项消融表](partC/results/param_search/ablation_shrink.md)、[验证集选出的参数](partC/results/param_search/selected.json)、[固定抽样](partC/indices/) |
 
 ### 先验证历史结果
@@ -29,7 +31,7 @@ python -m unittest discover -s tools/handoff -p test_handoff.py
 python partC/ablation_shrink.py
 ```
 
-脚本会重写 [C 的消融结果表](partC/results/param_search/ablation_shrink.md)。表中的 **D 减 B** 比较共享比例 0.75 和 0，使用相同 support、同一组打分权重与岭正则。EuroSAT 5-shot 的历史记录为 76.60% → 79.53%。此处的 B 和 D 是两组配置名。C 的原始数据加载入口目前支持 EuroSAT 与 Galaxy10；Flowers102 和 OrganAMNIST 的统一对照属于下一阶段。
+脚本会重写 [C 的消融结果表](partC/results/param_search/ablation_shrink.md)。表中的 **D 减 B** 比较共享比例 0.75 和 0，使用相同 support、同一组打分权重与岭正则。EuroSAT 5-shot 的历史记录为 76.60% → 79.53%。此处的 B 和 D 是两组配置名。Flowers102 和 OrganAMNIST 的迁移对照使用[单独的运行入口](partC/run_paired_transfer.py)。
 
 ## 数据与复现范围
 
