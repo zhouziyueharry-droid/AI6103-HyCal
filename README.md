@@ -2,7 +2,7 @@
 
 Code, frozen protocols and results for the AI6103 (NTU) group project
 **"Pooled Covariance Shrinkage for HyCal: Few-Shot Cross-Domain Class-Incremental Learning"**.
-The final report is [`report/report.pdf`](report/report.pdf) (LaTeX source in [`report/`](report/)).
+The final report is [`report/AI6103_HyCal_Pooled_Covariance_Shrinkage.pdf`](report/AI6103_HyCal_Pooled_Covariance_Shrinkage.pdf) (LaTeX source in [`report/`](report/)).
 
 HyCal ([Lee et al., CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html))
 scores queries on frozen CLIP features with a calibrated mix of cosine similarity and a per-class
