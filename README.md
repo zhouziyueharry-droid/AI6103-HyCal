@@ -1,41 +1,146 @@
-# AI6103 · HyCal 少样本分类
+# Pooled Covariance Shrinkage for HyCal
 
-每类只有五张标注图时，能否通过共享各类内部的变化来改善分类？本仓库整合三个小组成员的 HyCal 实现、数据准备脚本和实验记录。所有方法使用冻结的 CLIP。
+Code, frozen protocols and results for the AI6103 (NTU) group project
+**"Pooled Covariance Shrinkage for HyCal: Few-Shot Cross-Domain Class-Incremental Learning"**.
+The final report is [`report/report.pdf`](report/report.pdf) (LaTeX source in [`report/`](report/)).
 
-**小组实验结果**：在 EuroSAT 上，5-shot 时 A、B、C 的测试准确率分别为 79.68%、73.87%、79.53%，10-shot 时为 86.18%、82.62%、86.40%。[EuroSAT 三种方法的实验过程、对照和复现命令](partC/results/reverse_eurosat/README.md) · [C 在 Flowers102 和 OrganAMNIST 上的配对实验](partC/results/paired_transfer/RESULTS.md)
+HyCal ([Lee et al., CVPR 2026](https://openaccess.thecvf.com/content/CVPR2026/html/Lee_HyCal_A_Training-Free_Prototype_Calibration_Method_for_Cross-Discipline_Few-Shot_Class-Incremental_CVPR_2026_paper.html))
+scores queries on frozen CLIP features with a calibrated mix of cosine similarity and a per-class
+Mahalanobis distance. With K ≤ 10 support images in a 512-d fused space, each class covariance has
+rank ≤ K. We shrink every class covariance toward the within-class covariance pooled over the
+current session,
 
-## 从哪里开始
+    S̃_c = (1 − α) S_c + α S_pool,   α = 0.75,
 
-| 工作 | 代码 | 可复核的材料 |
-|---|---|---|
-| A · 花卉、纹理、飞机 | [算法](src/)、[数据准备与实验入口](scripts/) | [固定抽样](data/manifests/)、[预测](results/part_a_round2/)、[统计表](reports/part_a_round2/analysis/) |
-| B · 医学 CT | [OrganAMNIST 加载器](external/HyCal-CIL/task_datasets/organamnist.py)、[B 提供的重建版门控函数](partC/member_b_reconstructed/query_gated_hycal.py) | [EuroSAT 迁移结果与逐图记录](partC/results/reverse_eurosat/member_b_reconstructed/RESULTS.md)。原医学实验的服务器脚本与逐图预测尚待核对。 |
-| C · 卫星和星系 | [协方差估计与打分](partC/hycal_cached.py)、[固定参数消融](partC/ablation_shrink.py) | [逐项消融表](partC/results/param_search/ablation_shrink.md)、[验证集选出的参数](partC/results/param_search/selected.json)、[固定抽样](partC/indices/) |
+and leave prototypes, fusion, calibration and weighting unchanged. One scalar is added and no
+images from earlier sessions are stored.
 
-### 先验证历史结果
+## Headline results
 
-以下命令从仓库根目录运行。第一条使用 Python 3.11+ 标准库，从已保存的预测复算 A 的 20 组指标，无需显卡、模型权重或原图。第二条运行该复算工具的自测。
+Test accuracy (%), mean ± std over support seeds 0, 1, 42. *Tuned HyCal* is the control: identical
+to our method except α = 0.
+
+| Dataset | K | Official HyCal script | Tuned HyCal (α = 0) | **Shrinkage (α = 0.75)** | Paired gain (pp) |
+|---|---:|---:|---:|---:|---:|
+| EuroSAT RGB | 5 | 71.37 ± 1.97 | 76.60 ± 1.63 | **79.53 ± 1.30** | +2.93 ± 1.24 |
+| EuroSAT RGB | 10 | 75.67 ± 0.92 | 83.49 ± 1.01 | **86.40 ± 0.87** | +2.92 ± 0.25 |
+| Galaxy10 DECaLS | 5 | 37.99 ± 1.81 | 37.99 ± 2.03 | **39.70 ± 2.04** | +1.71 ± 2.76 |
+| Galaxy10 DECaLS | 10 | 40.00 ± 1.95 | 39.74 ± 0.70 | **43.74 ± 1.77** | +4.00 ± 1.08 |
+| Flowers102 (held out) | 5 | – | 93.26 ± 0.19 | **95.41 ± 0.44** | +2.15 ± 0.31 |
+| Flowers102 (held out) | 10 | – | 95.02 ± 0.35 | **97.17 ± 0.34** | +2.15 ± 0.36 |
+| OrganAMNIST (held out) | 5 | – | 59.37 ± 0.53 | **64.30 ± 0.77** | +4.92 ± 0.59 |
+| OrganAMNIST (held out) | 10 | – | 65.61 ± 1.44 | **71.63 ± 1.88** | +6.02 ± 1.18 |
+
+Shrinkage improves 23 of the 24 paired 5/10-shot runs. The configuration was chosen on the EuroSAT
+and Galaxy10 validation splits and applied to Flowers102 and OrganAMNIST without retuning. The
+official `run_balanced.sh` (n_min = 20) disables Mahalanobis scoring for K ≤ 10, so it equals
+cosine-only scoring.
+
+## Repository layout
+
+```
+partC/                  Pooled covariance shrinkage (main method), EuroSAT / Galaxy10 / transfer experiments
+  hycal_cached.py         HyCal + pooled shrinkage on cached CLIP features
+  common.py               paths, dataset definitions, prompt templates
+  indices/                frozen support indices (K ∈ {1,5,10}, seeds 0/1/42)
+  results/                every number in the report (see the table below)
+  member_b_reconstructed/ query-gated weighting score function (alternative design)
+src/, scripts/, tests/  Projected shared visual covariance (alternative design) on Flowers102 / DTD / FGVC-Aircraft
+configs/, data/manifests/, results/part_a*/, reports/part_a_round2/
+                        frozen protocols, support manifests, predictions and statistics for src/ + scripts/
+tools/handoff/          standard-library verifier that recomputes the Flowers/DTD/Aircraft metrics from saved predictions
+external/HyCal-CIL/     official HyCal implementation (pinned commit 4558fb7) with bundled CLIP
+report/                 final report: LaTeX source, figures (+ generating scripts) and PDF
+```
+
+Raw images, CLIP weights and feature caches are not tracked (`data/`, `artifacts/`, `partC/cache/`
+are git-ignored).
+
+## Where each number in the report comes from
+
+| Report item | Source file(s) |
+|---|---|
+| Table 1 (datasets) | [`partC/common.py`](partC/common.py), [`data/manifests/flowers102/`](data/manifests/flowers102/), [`partC/results/paired_transfer/*/protocol.json`](partC/results/paired_transfer/) |
+| Table 2 (configurations), validation α sweep | [`partC/results/param_search/selected.json`](partC/results/param_search/selected.json), [`validation.md`](partC/results/param_search/validation.md), [`val_grid.csv`](partC/results/param_search/val_grid.csv) |
+| Table 3 (EuroSAT / Galaxy10) | [`partC/results/single_domain/*/summary.md`](partC/results/single_domain/), [`partC/results/param_search/ablation_shrink.md`](partC/results/param_search/ablation_shrink.md) |
+| Table 4 (Flowers102 / OrganAMNIST transfer) | [`partC/results/paired_transfer/RESULTS.md`](partC/results/paired_transfer/RESULTS.md) and per-seed `runs.csv` |
+| Table 5 (ablation), Figure 2 (α sensitivity) | [`partC/results/param_search/ablation_shrink.md`](partC/results/param_search/ablation_shrink.md) |
+| Table 6 (alternative designs) | [`partC/results/reverse_eurosat/README.md`](partC/results/reverse_eurosat/README.md), [`member_b_reconstructed/RESULTS.md`](partC/results/reverse_eurosat/member_b_reconstructed/RESULTS.md); GDA comparisons in [`reports/part_a_round2/analysis/`](reports/part_a_round2/analysis/) |
+| Figure 3 (OrganAMNIST per class), Flowers102 class counts | [`partC/results/paired_transfer/*/predictions.csv`](partC/results/paired_transfer/) |
+| Table 7 and cross-domain analysis | [`partC/results/param_search/incremental.md`](partC/results/param_search/incremental.md), [`partC/results/incremental/`](partC/results/incremental/) |
+
+## Setup
+
+Python ≥ 3.9 with PyTorch and torchvision (install the build that matches your CUDA/CPU), then
+
+```sh
+pip install -r requirements.txt
+```
+
+[`partC/requirements-macos.txt`](partC/requirements-macos.txt) pins the exact environment used for
+the EuroSAT / Galaxy10 runs. Encoding images needs the OpenAI CLIP ViT-B/16 weights; the bundled
+CLIP in `external/HyCal-CIL/clip` downloads them on first use.
+
+## Reproducing the main experiments
+
+All commands run from the repository root.
+
+**1. Check saved results without data or GPU** (standard library only):
 
 ```sh
 python tools/handoff/verify_predictions.py
 python -m unittest discover -s tools/handoff -p test_handoff.py
+python -m pytest tests          # numerical contracts of src/ (one test also needs open_clip_torch)
 ```
 
-### C 的方法怎么跑
+**2. Prepare EuroSAT and Galaxy10.** Put EuroSAT RGB in `data/eurosat/2750/` with the CoOp split
+`data/eurosat/split_zhou_EuroSAT.json`; put `Galaxy10_DECals.h5` in `data/Galaxy10_DECals/` and
+convert it with `python partC/prepare_galaxy10.py` (stratified 80/10/10 split, output in
+`data/Galaxy10_DECals/_galaxy_temp/`). The frozen
+support indices are already in `partC/indices/` (regenerate with `partC/make_support_indices.py`).
 
-已有兼容的 PyTorch、torchvision 和 NumPy 环境可以直接复用。[原 macOS 环境记录](partC/requirements-macos.txt)列有其余依赖；重新编码需要 Pillow、ftfy、regex、tqdm 和 OpenAI CLIP ViT-B/16 权重。原版 HyCal 的依赖另见[上游目录](external/HyCal-CIL/requirements.txt)。
-
-现成的 EuroSAT / Galaxy10 特征缓存放在 `partC/cache/{dataset}_ViT-B-16.npz`。缓存包含各划分的特征、标签、路径和类别文本特征，字段见[提取脚本](partC/extract_features.py)。有两套缓存和仓库内的固定索引后，可从根目录运行：
+**3. Cache CLIP features once per dataset**, written to `partC/cache/{dataset}_ViT-B-16.npz`:
 
 ```sh
-python partC/ablation_shrink.py
+python partC/extract_features.py --dataset eurosat
+python partC/extract_features.py --dataset galaxy10
 ```
 
-脚本会重写 [C 的消融结果表](partC/results/param_search/ablation_shrink.md)。表中的 **D 减 B** 比较共享比例 0.75 和 0，使用相同 support、同一组打分权重与岭正则。EuroSAT 5-shot 的历史记录为 76.60% → 79.53%。此处的 B 和 D 是两组配置名。Flowers102 和 OrganAMNIST 的迁移对照使用[单独的运行入口](partC/run_paired_transfer.py)。
+**4. Run the experiments** (CPU, under 0.5 s per run on cached features):
 
-## 数据与复现范围
+```sh
+python partC/param_search.py      # validation grid → selected.json; test.md; incremental.md (Table 7)
+python partC/ablation_shrink.py   # Table 5 and the α sweep (Figure 2)
+python partC/run_single_domain.py --dataset eurosat    # zero-shot / cosine / MD / official baselines
+python partC/run_single_domain.py --dataset galaxy10
+python partC/run_incremental.py --shots 10 1 --all_orders   # per-session matrices in results/incremental/
+```
 
-- A 的 [Flowers102 准备脚本](scripts/prepare_flowers.py)生成当前机器的样本路径和来源记录。公开仓保留可迁移的类别映射与 support 索引。历史锁针对当时的完整工作区，另行复算全部旧锁需要对应版本的特征缓存与原始资产。
-- C 的 EuroSAT RGB 使用 CoOp/Zhou 划分；Galaxy10 DECaLS 使用原先的分层划分。[数据目录约定](partC/common.py)和[索引生成脚本](partC/make_support_indices.py)定义输入格式。
-- 官方 HyCal 和随附的 CLIP 统一位于 [external/HyCal-CIL](external/HyCal-CIL/)，源自[上游固定提交](https://github.com/EJLEE5826/HyCal-CIL/tree/4558fb7fa6aa389310c9e9dc7db7c2cbebc84a41)。B 包内的 TC2 检查脚本也保存在该目录。上游 [LICENSE](external/HyCal-CIL/LICENSE) 和 [CLIP 许可说明](external/HyCal-CIL/THIRD_PARTY_NOTICES.md)随代码保留。若运行 A 的严格上游对照 `scripts/verify_official.py`，需将 `HYCAL_OFFICIAL_CHECKOUT` 指向该提交的干净独立 Git checkout，供脚本校验真实提交身份。
-- 原图、模型权重和特征缓存由各成员单独准备；仓内可共享配置、索引、方法代码与结果。新实验请保留数据集、种子、配置及逐种子结果，方便组员复核。
+**5. Held-out transfer and alternative designs** (inputs listed in each results README, placed in
+`artifacts/paired_inputs/`):
+
+```sh
+python partC/run_paired_transfer.py flowers102
+python partC/run_paired_transfer.py organamnist
+python partC/run_reverse_eurosat.py --include-gate
+python partC/run_member_b_eurosat.py
+```
+
+The projected-shared-covariance study on Flowers102 / DTD / FGVC-Aircraft is driven by
+`scripts/prepare_*.py`, `scripts/cache_*.py` and `scripts/run_round2*.py` with the frozen protocols
+in `configs/` and `data/manifests/`; `scripts/verify_official.py` checks the cached implementation
+against the pinned upstream code (set `HYCAL_OFFICIAL_CHECKOUT` to a clean checkout of commit
+4558fb7).
+
+**Rebuilding the report**: compile `report/report.tex` with pdfLaTeX (e.g. Overleaf), or
+`tectonic report/build_tectonic.tex` locally. Figures are regenerated with
+`python report/figures/src/make_plots.py report/figures` and
+`python report/figures/src/make_overview.py report/figures/src`.
+
+## Acknowledgements and licences
+
+`external/HyCal-CIL/` is the official HyCal code
+([EJLEE5826/HyCal-CIL](https://github.com/EJLEE5826/HyCal-CIL/tree/4558fb7fa6aa389310c9e9dc7db7c2cbebc84a41)),
+kept with its [LICENSE](external/HyCal-CIL/LICENSE) and the
+[CLIP notice](external/HyCal-CIL/THIRD_PARTY_NOTICES.md). Datasets: EuroSAT, Galaxy10 DECaLS,
+Oxford Flowers102, DTD, FGVC-Aircraft and MedMNIST v2 OrganAMNIST, each under its own licence.

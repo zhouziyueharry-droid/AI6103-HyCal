@@ -1,14 +1,12 @@
-"""Independent, standard-library regression checks for the delivery utilities."""
+"""Independent, standard-library regression checks for verify_predictions.py."""
 import csv
 import json
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-import zipfile
 
 from verify_predictions import prediction_metrics, compare_record, save_outputs, selected_runs
-from package_handoff import build_archive, verify_archive
 
 
 class PredictionChecks(unittest.TestCase):
@@ -85,29 +83,6 @@ class PredictionChecks(unittest.TestCase):
             save_outputs(payload,out,self.root)
         with self.assertRaises(ValueError):
             save_outputs(payload,self.root/'results'/'new',self.root)
-
-    def test_archive_integrity_membership_and_no_overwrite(self):
-        import hashlib
-        source=self.root/'example.txt'
-        source.write_bytes(b'original evidence')
-        manifest={'files':[{'archive_path':'example.txt','source_relative_path':'example.txt',
-                           'size_bytes':source.stat().st_size,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()}]}
-        archive=self.root/'delivery.zip'
-        build_archive(self.root,archive,manifest)
-        self.assertTrue(verify_archive(archive)['passed'])
-        with self.assertRaises(FileExistsError):
-            build_archive(self.root,archive,manifest)
-        with zipfile.ZipFile(archive,'a') as z:
-            z.writestr('unlisted.txt','unexpected')
-        with self.assertRaises(ValueError):
-            verify_archive(archive)
-
-    def test_archive_rejects_protected_research_output(self):
-        for relative in ('results/new.zip','src/new.zip','docs/new.zip'):
-            with self.subTest(relative=relative):
-                with self.assertRaises(ValueError):
-                    build_archive(self.root,self.root/relative,{'files':[]})
-                self.assertFalse((self.root/relative).exists())
 
 
 if __name__ == '__main__':

@@ -1,0 +1,14 @@
+# Direct dependencies for the experiments in this repository.
+# Install torch / torchvision separately for your platform (CUDA or CPU), e.g. from pytorch.org.
+# partC/requirements-macos.txt pins the exact environment used for the EuroSAT / Galaxy10 runs.
+numpy>=2.0
+scipy>=1.13
+scikit-learn>=1.6     # Galaxy10 stratified split (partC/prepare_galaxy10.py)
+h5py>=3.11            # Galaxy10 DECaLS HDF5 reader
+pillow>=11.0
+ftfy>=6.3             # bundled CLIP tokenizer
+regex>=2024.0
+tqdm>=4.66
+PyYAML>=6.0
+matplotlib>=3.9       # figures
+pytest>=8.0           # tests/

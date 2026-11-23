@@ -1,6 +1,0 @@
-% Local build entry for Tectonic (XeTeX), which lacks the pdfTeX primitive \pdfinfo.
-% report.tex stays untouched; Overleaf / pdfLaTeX should compile report.tex directly.
-\def\pdfinfo#1{}
-% XeTeX defaults to TU encoding, for which Times/Helvetica/Courier have no shapes; use T1 like pdfLaTeX.
-\AddToHook{package/times/before}{\RequirePackage[T1]{fontenc}}
-\input{report}
